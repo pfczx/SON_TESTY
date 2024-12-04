@@ -1,0 +1,10 @@
+ECHO is on.
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folder
+.venv/
+
+# Ignore IDE files
+.idea/
