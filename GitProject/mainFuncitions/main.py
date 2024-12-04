@@ -1,7 +1,6 @@
-from importStudents import ImportStudents
-from addStudent import ModifyStudents
+from GitProject.mainFuncitions.importStudents import ImportStudents
 
-path = "lists/student_list.csv"
+path = "../lists/student_list.csv"
 path2 = "lists/student_list.txt"
 
 lista = ImportStudents.csv(path, ["Name", "Surname", "ID"])

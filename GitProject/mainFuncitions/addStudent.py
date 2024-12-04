@@ -1,4 +1,5 @@
-from exportStudents import ExportStudents
+from GitProject.mainFuncitions.exportStudents import ExportStudents
+
 import os
 
 
