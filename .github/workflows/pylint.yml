@@ -28,4 +28,3 @@ jobs:
     - name: Run unit tests with coverage
       run: |
         pytest --cov=GitProject
-    
