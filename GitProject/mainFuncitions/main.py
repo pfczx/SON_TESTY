@@ -3,11 +3,17 @@ from GitProject.mainFuncitions.importStudents import ImportStudents
 # TODO: test_TODO2
 # TODO: test
 # TODO: test_TODO1
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/6
 # TODO: test_TODO2
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/5
 # TODO: test
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/4
 # TODO: test_TODO1
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/3
 # TODO: test_TODO2
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/2
 # TODO: test
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/1
 
 
 path = "../lists/student_list.csv"
