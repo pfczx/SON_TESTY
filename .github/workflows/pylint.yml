@@ -1,7 +1,6 @@
 name: Ci
 
-on: [push, pull_request]
-permissions: read-all
+on: [ "push" ]
 jobs:
   build:
     runs-on: ubuntu-latest
