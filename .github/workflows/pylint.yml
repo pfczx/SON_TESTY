@@ -23,8 +23,8 @@ jobs:
         echo "Listing Python files"
         git ls-files "*.py"
     - name: Analysing the code with pylint
+      continue-on-error: true 
       run: |
-        continue-on-error: true 
         pylint $(git ls-files '*.py')
     - name: Run unit tests with coverage
       run: |
