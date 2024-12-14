@@ -29,8 +29,6 @@ jobs:
            ruff check .
            ruff format .
            ruff check --fix .
-    - name: TODO to Issue
-    
     - name: Run unit tests with coverage
       run: |
         pytest --cov=GitProject
