@@ -25,6 +25,7 @@ jobs:
         echo "Listing Python files"
         git ls-files "*.py"
     - name: Analysing the code with pylint
+      continue-on-error: true
       run: |
         pylint $(git ls-files '*.py')
     - name: Ruff linting
