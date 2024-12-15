@@ -1,6 +1,6 @@
 from GitProject.mainFuncitions.importStudents import ImportStudents
-# TODO: test_TODO1
-# TODO: test_TODO2
+# TODO: todo
+# TODO: todo
 
 
 
