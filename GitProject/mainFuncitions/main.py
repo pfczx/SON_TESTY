@@ -1,6 +1,8 @@
 from GitProject.mainFuncitions.importStudents import ImportStudents
 # TODO: todo
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/8
 # TODO: todo
+# Issue URL: https://github.com/pfczx/SON_TESTY/issues/7
 
 
 
