@@ -2,12 +2,7 @@ from GitProject.mainFuncitions.importStudents import ImportStudents
 # TODO: test_TODO1
 # TODO: test_TODO2
 # TODO: test
-# TODO: test_TODO1
-# TODO: test_TODO2
-# TODO: test
-# TODO: test_TODO1
-# TODO: test_TODO2
-# TODO: test
+
 
 
 path = "../lists/student_list.csv"
