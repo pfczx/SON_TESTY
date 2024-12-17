@@ -38,6 +38,7 @@ jobs:
         
   lint:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -46,11 +47,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint ruff
     - name: Run pylint
-      continue-on-error: true
       run: |
         pylint $(git ls-files "*.py") 
     - name: Run ruff
-      continue-on-error: true
       run: |
         ruff check $(git ls-files "*.py")
         ruff --fix
