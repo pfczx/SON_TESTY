@@ -75,11 +75,15 @@ jobs:
         CREATE_LOG_FILE: true  
         DEFAULT_WORKSPACE: ${{ github.workspace }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Upload log file
-      uses: actions/upload-artifact@v3
-      with:
-        name: super-linter-log
-        path: .github/linters/super-linter.log
+    
+  Log_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload log file
+        uses: actions/upload-artifact@v3
+        with:
+          name: super-linter-log
+          path: .github/linters/super-linter.log
         
 
   test_coverage:
