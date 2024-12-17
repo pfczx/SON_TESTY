@@ -28,25 +28,7 @@ jobs:
     - name: List Python files
       run: |
         echo "Listing Python files"
-        git ls-files "*.py"
-        
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint ruff
-        pip install pylint pylint
-    - name: Run pylint
-      continue-on-error: true
-      run: |
-        pylint $(git ls-files "*.py") 
-    - name: Run ruff
-      run: |
-        ruff check --fix $(git ls-files "*.py")
+        git ls-files "*.py"   
 
         
   superlint:
@@ -70,17 +52,9 @@ jobs:
         VALIDATE_PYTHON_RUFF: true
         VALIDATE_PYTHON: true
         VALIDATE_PYTHON_BLACK: true
-        continue-on-error: true
-        VALIDATE_PYTHON_ISORT: true
-        CREATE_LOG_FILE: true  
+        VALIDATE_PYTHON_ISORT: true 
         DEFAULT_WORKSPACE: ${{ github.workspace }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SUPER_LINTER_LOG_PATH: ./.github/workflows/linter.log
-    - name: Upload log file
-      uses: actions/upload-artifact@v3
-      with:
-        name: super-linter-log
-        path: ./.github/workflows/linter.log
         
 
   test_coverage:
