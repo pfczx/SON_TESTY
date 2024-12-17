@@ -44,9 +44,7 @@ class Testing:
         pathtxt = os.path.join(base_dir, "../testLists/studentTestList.txt")
         pathcsv = os.path.join(base_dir, "../testLists/studentTestList.csv")
         listOfStudents = [{"Name": "Tomek", "Surname": "Ananas", "ID": "777ABC"}]
-        expectedListContent = [
-            {"Name": "Maciek", "Surname": "Poziomka", "ID": "777ABC"}
-        ]
+        expectedListContent = [{"Name": "Maciek", "Surname": "Poziomka", "ID": "777ABC"}]
 
         expectedTxtContent = "Maciek Poziomka - 777ABC"
         expectedCsvContent = "Maciek;Poziomka;777ABC"
