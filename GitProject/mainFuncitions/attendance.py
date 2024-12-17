@@ -1,6 +1,7 @@
-﻿from GitProject.mainFuncitions.importStudents import ImportStudents
+﻿import os
 
-import os
+from GitProject.mainFuncitions.importStudents import ImportStudents
+
 
 class Attendance:
     def __init__(self):
@@ -15,7 +16,9 @@ class Attendance:
             student_name = f"{student['Name']} {student['Surname']}"
             present = input(f"Is {student_name} present? (1/0): ") == "1"
             self.presence[date][student_name] = present
-            print(f"Attendance for student {student_name} on {date} has been updated to {'present' if present else 'absent'}.\n")
+            print(
+                f"Attendance for student {student_name} on {date} has been updated to {'present' if present else 'absent'}.\n"
+            )
 
     # Displays the attendance list for students
     def download_attendance(self, date):
@@ -41,7 +44,10 @@ class Attendance:
             return
         present = input(f"Is {student_name} present? (1/0): ") == "1"
         self.presence[date][student_name] = present
-        print(f"Attendance for student {student_name} on {date} has been updated to {'present' if present else 'absent'}.")
+        print(
+            f"Attendance for student {student_name} on {date} has been updated to {'present' if present else 'absent'}."
+        )
+
 
 if __name__ == "__main__":
     attendance = Attendance()
@@ -67,7 +73,9 @@ if __name__ == "__main__":
             print("No file with the student list found.")
 
     while True:
-        print("\n1. Check Attendance for All\n2. Download Attendance\n3. Modify Attendance\n4. Clear Attendance\n5. Exit")
+        print(
+            "\n1. Check Attendance for All\n2. Download Attendance\n3. Modify Attendance\n4. Clear Attendance\n5. Exit"
+        )
         choice = input("Choose an option: ")
 
         if choice == "1":
@@ -87,4 +95,3 @@ if __name__ == "__main__":
             break
         else:
             print("Please try again.\n")
-

@@ -38,4 +38,3 @@ class ImportStudents:
             students.append(student_details_dict)
 
         return students
-

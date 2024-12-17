@@ -1,6 +1,6 @@
-from GitProject.mainFuncitions.exportStudents import ExportStudents
-
 import os
+
+from GitProject.mainFuncitions.exportStudents import ExportStudents
 
 
 class ModifyStudents:
@@ -17,7 +17,11 @@ class ModifyStudents:
     # method to add student to file, if file doesn't exist, it will create it
     @staticmethod
     def add_student_by_overwriting(path, path2):
-        student = [input("Enter student's name: "), input("Enter student's surname: "), input("Enter student's ID: ")]
+        student = [
+            input("Enter student's name: "),
+            input("Enter student's surname: "),
+            input("Enter student's ID: "),
+        ]
         if os.path.exists(path) and os.path.exists(path2):
             file = open(path, "a")
             file2 = open(path2, "a")
@@ -43,21 +47,13 @@ class ModifyStudents:
                 return
         print("Student not found.")
 
-
     @staticmethod
     def delete_student(path, path2, students):
-          student_id = input("Enter student's ID to delete: ")
-          for i in range(len(students)):
-              if students[i]["ID"] == student_id:
-                  del students[i]
-                  ExportStudents.csv(path, students)
-                  ExportStudents.txt(path2, students)
-                  return
-          print("Student not found.")
-
-
-
-
-
-
-
+        student_id = input("Enter student's ID to delete: ")
+        for i in range(len(students)):
+            if students[i]["ID"] == student_id:
+                del students[i]
+                ExportStudents.csv(path, students)
+                ExportStudents.txt(path2, students)
+                return
+        print("Student not found.")

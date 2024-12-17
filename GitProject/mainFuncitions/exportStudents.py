@@ -40,7 +40,6 @@ class ExportStudents:
                 else:
                     line.append(" ")
 
-
             line.pop()
 
             line = "".join(line)
