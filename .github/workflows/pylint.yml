@@ -52,8 +52,7 @@ jobs:
         pylint $(git ls-files "*.py") 
     - name: Run ruff
       run: |
-        ruff check $(git ls-files "*.py")
-        ruff --fix
+        ruff check --fix $(git ls-files "*.py")
 
         
   superlint:
