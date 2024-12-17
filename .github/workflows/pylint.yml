@@ -60,6 +60,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+    - name: Fix imports and formating
+      run: |
+        isort $(git ls-files "*.py")
+        black . --line-length 79
     - name: Run Super-Linter
       uses: github/super-linter@v4
       env:
