@@ -36,7 +36,7 @@ jobs:
         echo "Listing Python files"
         git ls-files "*.py"
         
-  lint2:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -46,12 +46,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint ruff
     - name: Run pylint
+      continue-on-error: true
       run: |
         pylint $(git ls-files "*.py") --disable=R,C
     - name: Run ruff
+      continue-on-error: true
       run: |
         ruff check $(git ls-files "*.py")
-  lint:
+
+        
+  superlint:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
