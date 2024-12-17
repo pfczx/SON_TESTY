@@ -48,11 +48,12 @@ jobs:
     - name: Run pylint
       continue-on-error: true
       run: |
-        pylint $(git ls-files "*.py") --disable=R,C
+        pylint $(git ls-files "*.py") 
     - name: Run ruff
       continue-on-error: true
       run: |
         ruff check $(git ls-files "*.py")
+        ruff --fix
 
         
   superlint:
