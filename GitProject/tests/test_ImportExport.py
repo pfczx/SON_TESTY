@@ -5,7 +5,6 @@ from GitProject.mainFuncitions.importStudents import ImportStudents
 
 
 class Testing:
-
     @staticmethod
     def test_import_students():
         # given

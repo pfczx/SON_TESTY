@@ -47,6 +47,7 @@ class Testing:
         expectedListContent = [
             {"Name": "Maciek", "Surname": "Poziomka", "ID": "777ABC"}
         ]
+
         expectedTxtContent = "Maciek Poziomka - 777ABC"
         expectedCsvContent = "Maciek;Poziomka;777ABC"
         with open(pathtxt, "w") as f:
