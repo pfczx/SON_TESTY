@@ -24,6 +24,8 @@ jobs:
         pip install pylint
         pip install ruff
         pip install pytest pytest-cov
+        pip install isort
+        pip install black
 
         
   fileslist:
