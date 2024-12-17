@@ -24,20 +24,31 @@ jobs:
         pip install pylint
         pip install ruff
         pip install pytest pytest-cov
+  fileslist:
+    runs-on: ubuntu-latest
+    steps:
     - name: List Python files
       run: |
         echo "Listing Python files"
         git ls-files "*.py"
-    - name: Analysing the code with pylint
-      continue-on-error: true
-      run: |
-        pylint $(git ls-files '*.py')
-    - name: Ruff linting
-      continue-on-error: true 
-      run: |
-           ruff check .
-           ruff format .
-           ruff check --fix .
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run Super-Linter
+      uses: github/super-linter@v4
+      env:
+        VALIDATE_PYTHON_PYLINT: true
+        VALIDATE_PYTHON_RUFF: true
+        VALIDATE_PYTHON: true
+        DEFAULT_WORKSPACE: ${{ github.workspace }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test_cverage:
+    runs-on: ubuntu-latest
+    steps:
     - name: Run unit tests with coverage
       run: |
         pytest --cov=GitProject
