@@ -75,7 +75,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: super-linter-log
-        path: .github/workflows/super-linter.log
+        path: .github/linters/super-linter.log
         
 
   test_coverage:
