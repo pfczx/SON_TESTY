@@ -8,3 +8,6 @@ __pycache__/
 
 # Ignore IDE files
 .idea/
+
+/build/
+/SON_TESTY.egg-info/

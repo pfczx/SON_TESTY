@@ -5,9 +5,7 @@ from setuptools import find_packages, setup
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
-version = os.getenv(
-    "VERSION", "1.1.1"
-)
+version = os.getenv("VERSION", "1.1.1")
 
 
 
