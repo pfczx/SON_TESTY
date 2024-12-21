@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 version = os.getenv(
-    "VERSION", "0.0.0"
+    "VERSION", "1.1.1"
 )
 
 
