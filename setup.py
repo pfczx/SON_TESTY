@@ -12,7 +12,7 @@ version = os.getenv(
 
 
 setup(
-    name="SON_TESTY",
+    name="son_paczka",
     version=version,
     description="Terrible code",
     url="https://github.com/pfczx/SON_TESTY",
