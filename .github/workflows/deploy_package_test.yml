@@ -34,7 +34,7 @@ jobs:
     - name: Build distribution
       run: make build_distribution
       env:
-        PACKAGE_VERSION: ${{ env.VERSION }}"
+        PACKAGE_VERSION: ${{ env.VERSION }}
 
     - name: Publish to TestPyPI
       env:
